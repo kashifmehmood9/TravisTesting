@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oqd-d4-5R9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Accounts View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AccountsViewController" id="BYZ-38-t0r" customClass="AccountsViewController" customModule="Accounts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d86-vp-smP">
+                                <rect key="frame" x="94" y="350.5" width="187.5" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DeductButton"/>
+                                <state key="normal" title="Deduct">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deductAmountAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ods-pA-L6N"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Deduction Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6H-SQ-TYP">
+                                <rect key="frame" x="94" y="305" width="187.5" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="AmountTextField" label="AmountTextField">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d86-vp-smP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Jt-tw-ygI"/>
+                            <constraint firstItem="w6H-SQ-TYP" firstAttribute="width" secondItem="d86-vp-smP" secondAttribute="width" id="Try-1p-QDf"/>
+                            <constraint firstItem="w6H-SQ-TYP" firstAttribute="height" secondItem="d86-vp-smP" secondAttribute="height" id="a9b-6i-ipN"/>
+                            <constraint firstItem="d86-vp-smP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ioX-78-BWj"/>
+                            <constraint firstItem="w6H-SQ-TYP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jGS-DB-wom"/>
+                            <constraint firstItem="d86-vp-smP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="xre-US-uMr"/>
+                            <constraint firstItem="d86-vp-smP" firstAttribute="top" secondItem="w6H-SQ-TYP" secondAttribute="bottom" constant="15.5" id="yn8-Xn-TXP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qJs-nF-iRo"/>
+                    <connections>
+                        <outlet property="deductAmountButton" destination="d86-vp-smP" id="nxg-B5-t6z"/>
+                        <outlet property="deductionAmountTextField" destination="w6H-SQ-TYP" id="8II-dy-Cir"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="MEZ-gy-QQn">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="D6M-st-bb9" customClass="DetailViewController" customModule="Accounts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RXv-ib-usH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-Dr-J0F">
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="SuccessLabel">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="DetailView">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="BTn-Dr-J0F" firstAttribute="centerY" secondItem="RXv-ib-usH" secondAttribute="centerY" id="PFx-Y0-mOu"/>
+                            <constraint firstItem="BTn-Dr-J0F" firstAttribute="centerX" secondItem="RXv-ib-usH" secondAttribute="centerX" id="bDp-S5-xRj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cgn-Bu-ipy"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="BTn-Dr-J0F" id="0Jn-7j-Ofr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2CH-7b-cSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848.8" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fHh-eB-hkf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oqd-d4-5R9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8KA-qq-aXY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tqP-Zm-bdG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmd-N1-ZmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="791.15442278860576"/>
+        </scene>
+    </scenes>
+</document>
